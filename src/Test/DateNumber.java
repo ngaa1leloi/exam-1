@@ -15,7 +15,7 @@ public class DateNumber {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println(totalDays);
+		System.out.println("Tổng số ngày giữa " + startDate + " và " + closeDate + ": " + totalDays);
 	}
 
 	public static void plusMonth(String startDate, int difMonth) {
@@ -41,12 +41,12 @@ public class DateNumber {
 				day = day - numberOfDays[month - 2] + numberOfDays[month - 1];
 			}
 		}
-		String dayStr = (day<10)?("0"+Integer.toString(day)):Integer.toString(day);
-		String monthStr = (month<10)?("0"+Integer.toString(month)):Integer.toString(month);
+		String dayStr = (day < 10) ? ("0" + Integer.toString(day)) : Integer.toString(day);
+		String monthStr = (month < 10) ? ("0" + Integer.toString(month)) : Integer.toString(month);
 
 		String endDate = Integer.toString(year).concat(monthStr).concat(dayStr);
-		
-		System.out.println(endDate);
+
+		System.out.println("Ngày " + startDate + " cộng thêm " + difMonth + " tháng là: " + endDate);
 	}
 
 	public static void main(String[] args) {
